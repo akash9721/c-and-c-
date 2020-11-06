@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+void binarytodeci(int no)
+{
+	
+	int deci=0;
+	int base=1;
+	while(no!=0)
+	{
+		int rem=no%10;
+		deci=deci+rem*base;
+		no/=10;
+		base*=2;
+	}
+	cout<<"the decimal no is="<<deci<<endl;
+}
+void binarytooctal(int no)
+{
+	int oct=0;
+	int base=1;
+	while(no!=0)
+	{
+		int rem=no%10;
+		oct=oct+rem*base;
+		no/=10;
+		base*=8;
+	}
+		cout<<"the octal no is="<<oct<<endl;
+}
+void binarytohexadecimal(int no)
+{
+	int hexa=0;
+	int base=1;
+	while(no>0)
+	{
+		int rem=no%10;
+		hexa=hexa+rem*base;
+		no/=10;
+		base*=16;
+	}
+		cout<<"the hexadecimal  no is="<<hexa<<endl;
+	
+}
+
+int main()
+{
+	int no;
+	cout<<"enter binary no:";
+	cin>>no;
+	binarytodeci(no);
+	binarytooctal(no);
+	binarytohexadecimal(no);
+	
+}
