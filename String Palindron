@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    char s[100];
+    cin.get(s,100);
+    int flag=0;
+
+    int l=0;
+    int h=strlen(s)-1;
+    while(h>l)
+    {
+        if(s[l++]!=s[h--])
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    cout<<s<<" is palindron"<<endl;
+    else
+    cout<<s<<" is not palindron";
+    
+  }
