@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    char str[100];
+    int i=0,chr=0,st=1;
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        chr=chr+1;
+    }
+    cout<<chr<<endl;
+    for(i=0;i<=chr-1;i++)
+    {
+        if(str[i]==' ')
+        {
+            st=st+1;
+        }
+    }
+    cout<<st;
+}
