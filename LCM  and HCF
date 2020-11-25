@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long hcf(int a,int b)
+{
+    if(a==0)
+        return b;
+    else
+        return hcf(b%a,a);
+}
+long long lcm(int a,int b)
+{
+    return (a/hcf(a,b))*b;
+}
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    cout<<"the LCM is="<<lcm(a,b)<<endl;
+    cout<<"the HCF is="<<hcf(a,b)<<endl;
+
+}
